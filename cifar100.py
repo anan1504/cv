@@ -243,7 +243,7 @@ def inference(images):
                                               stddev=0.04, wd=0.004)
         biases = _variable_on_cpu(
             'biases', [192], tf.constant_initializer(0.1))
-        local4 = tf.nn.relu(tf.matmul(hidden30, weights) +
+        local4 = tf.nn.relu(tf.matmul(local3, weights) +
                             biases, name=scope.name)
         _activation_summary(local4)
 
