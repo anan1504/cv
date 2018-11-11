@@ -40,7 +40,7 @@ import cifar100
 
 PARSER = cifar100.parser
 
-PARSER.add_argument('--train_dir', type=str, default='/tmp/cifar100_train',
+PARSER.add_argument('--train_dir', type=str, default='cifar100_train',
                     help='Directory where to write event logs and checkpoint.')
 
 PARSER.add_argument('--max_steps', type=int, default=1000000,

@@ -49,7 +49,7 @@ def read_cifar100(filename_queue):
         depth: number of color channels in the result (3)
         key: a scalar string Tensor describing the filename & record number
           for this example.
-        label: an int32 Tensor with the label in the range 0..9.
+        label: an int32 Tensor with the label in the range 0..9. SHOULDNT IT BE 100?!
         uint8image: a [height, width, depth] uint8 Tensor with the image data
     """
 
@@ -168,7 +168,7 @@ def distorted_inputs(data_dir, batch_size):
     # Image processing for training the network. Note the many random
     # distortions applied to the image.
 
-    # Randomly crop a [height, width] section of the image.
+    # Randomly crop a [height, width] section of the image. ##diff from google
     padded_image = tf.image.resize_image_with_crop_or_pad(
         reshaped_image, height + 4, width + 4)
 
